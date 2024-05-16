@@ -22,6 +22,7 @@ count_bits.o: count_bits.c
 	$(CC) $(CFLAGS) -I$(INCLUDEDIR) -c count_bits.c
 
 install: count_bits.so
+	su postgres
 	cp count_bits.so $(PKGLIBDIR)
 	chmod 644 $(PKGLIBDIR)/count_bits.so
 
